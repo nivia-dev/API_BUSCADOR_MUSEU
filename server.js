@@ -12,6 +12,7 @@ app.use(express.json());
 // Usar DATABASE_URL para o caminho do banco de dados
 const dbPath = process.env.DATABASE_URL || './database.db';
 const db = new sqlite3.Database(dbPath);
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 app.get('/api/museus', (req, res) => {
   const { pagina = 1, limite = 20, uf, municipio, buscaTermo } = req.query;
@@ -87,14 +88,14 @@ app.get('/api/pesquisa', (req, res) => {
 
 // Servir os arquivos do frontend em produçao
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
+  app.use(express.static(path.join(__dirname,  'frontend', 'dist')));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'frontend', 'dist', 'index.html'))
+    res.sendFile(path.join(__dirname,  'frontend', 'dist', 'index.html'))
   })
 }
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
