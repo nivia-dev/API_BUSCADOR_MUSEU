@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Instale as dependências
-RUN npm install --build-from-source
+RUN npm install --build-from-source sqlite3 
 
 # Copie o restante do código da aplicação
 COPY . .
