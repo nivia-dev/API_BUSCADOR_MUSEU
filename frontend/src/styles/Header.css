@@ -1,0 +1,81 @@
+header {
+  max-width:1080px;
+  background-color: var(--cor3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: var(--font-menu);
+}
+.collapse {
+  padding-inline: 2rem;
+}
+
+.container-fluid {
+  margin-left: 2rem;
+}
+
+ul.custom-navbar-nav {
+  --bs-nav-link-color: var(--cor0);
+}
+.nav-item {
+  font-size: 1.3rem;
+}
+
+.nav-item:hover {
+  font-size: 1.8rem;
+}
+
+.custom-toggler {
+  margin-left: 1.5rem;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+}
+
+.btn-primary {
+    width: 140px;
+    background-color: var(--cor0);
+    color: var(--cor2);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 0;   
+   
+}
+
+.btn-primary:hover {
+    color: var(--cor3);
+    font-size: 1.4rem;
+    
+}
+
+.imgMuseu {
+  margin-left: -2rem;
+}
+
+.imgMuseu img {
+  width: 15vw;
+  padding-top: 1rem;
+}
+
+@media (max-width: 720px) {
+  .btn-primary {
+    font-size: 0.8rem;
+  }
+  .btn-primary:hover {
+    font-size: 1rem;
+}
+}
+
+@media (min-width:1020px) {
+  .imgMuseu img {
+    width: 10vw;
+  }
+}
