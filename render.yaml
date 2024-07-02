@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    buildCommand: docker build -t my-backend .
+    startCommand: docker run -p 3000:3000 my-backend
