@@ -8,4 +8,4 @@ services:
         value: production
     envVars:
       - key: PORT
-        value: "3000"
+        value: "5000"

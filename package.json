@@ -1,12 +1,12 @@
 {
-  "name": "backend",
+  "name": "api_buscador_museu",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run build:frontend && node server.js",
     "dev": "nodemon server.js",
-    "build": "cd ../frontend && npm install && npm run build && cd ../backend && npm install",
+    "build:frontend": "cd frontend && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
