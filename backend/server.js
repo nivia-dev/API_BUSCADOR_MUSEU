@@ -1,14 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const db = require('./database');
+//const db = require('./database');
+const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-
+// Usar DATABASE_URL para o caminho do banco de dados
+const dbPath = process.env.DATABASE_URL || './database.db';
+const db = new sqlite3.Database(dbPath);
 
 app.get('/api/museus', (req, res) => {
   const { pagina = 1, limite = 20, uf, municipio, buscaTermo } = req.query;
