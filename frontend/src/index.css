@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Parisienne&family=Rubik+Dirt&family=Rubik+Puddles&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800,900');
+
+:root {
+    --cor0: #f7f1ec;
+    --cor1: #f0e68cf5;
+    --cor2: #d6843cfd;
+    --cor3: #86450b;
+    --cor4: #f0e68c88;
+
+
+    --font-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Courgette', cursive;
+    --font-menu: 'Alegreya Sans', sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
