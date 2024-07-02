@@ -1,7 +1,11 @@
 services:
   - type: web
     name: backend
-    env: docker
-    dockerfilePath: ./Dockerfile
-    buildCommand: docker build -t backend .
-    startCommand: docker run -p 3000:3000 backend
+    buildCommand: npm run build
+    startCommand: npm start
+    env:
+      - key: NODE_ENV
+        value: production
+    envVars:
+      - key: PORT
+        value: "3000"
