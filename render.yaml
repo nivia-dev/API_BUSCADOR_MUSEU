@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: backend
-    buildCommand: npm run build
+    name: api_buscador_museu
+    buildCommand: npm install && cd frontend && npm install && npm run build
     startCommand: npm start
     env:
       - key: NODE_ENV
