@@ -3,11 +3,15 @@ function Filters({ selecionadaChaves, mudancaCheckbox, setBuscaTermo, ufs, setUf
 
     // Função para ordenar e colocar linhas vazias no final
     const ordenarLista = (lista) => {
+        if (!Array.isArray(lista)) {
+            return [];
+        }
         return lista.sort((a, b) => {
             if (!a) return 1;
             if (!b) return -1;
             return a.localeCompare(b);
         });
+       
     };
 
     return (

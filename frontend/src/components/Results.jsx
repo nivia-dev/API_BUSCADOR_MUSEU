@@ -1,7 +1,7 @@
 function Results({ dadosFiltrados, cliqueItem, ufSelecionado }) {
     return (
         <ul className="list-group custom-list-group">
-            {dadosFiltrados.map(item => (
+            {Array.isArray(dadosFiltrados) && dadosFiltrados.map(item => (
                 <li
                     key={item.id}
                     className="list-group-item list-group-item-action"

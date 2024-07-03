@@ -15,6 +15,7 @@ const db = new sqlite3.Database(dbPath);
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 app.get('/api/museus', (req, res) => {
+ 
   const { pagina = 1, limite = 20, uf, municipio, buscaTermo } = req.query;
   const offset = (pagina - 1) * limite;
 
