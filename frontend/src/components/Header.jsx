@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <figure className='imgMuseu'>
-                <img src="../../public/museuImg.png" alt="" />
+                <img src="/museuImg.png" alt="" />
                 </figure>
             <nav className='navbar navbar-expand-lg navbar-light '>
                 <div className='container-fluid'>

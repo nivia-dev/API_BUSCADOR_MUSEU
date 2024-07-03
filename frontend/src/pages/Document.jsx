@@ -58,7 +58,7 @@ function Document() {
                             </li>
                             <li> Entra na pasta do frontend e instale as dependências com npm install,
                                  já vamos instalar o axios npm install axios. Vamos rodar o projeto usando npm run dev. No terminal irá aparecer algo assim: <br />
-                                 <img src="../../public/localhost.png" alt="Tela conexão localhost" /> <br />
+                                 <img src="/localhost.png" alt="Tela conexão localhost" /> <br />
                                 Abre o local no navegador e se aparecer a página do Vite, está tudo ok.
                             </li>
                             <li>Agora vamos montar a estrutura: dentro da pasta src crie as pastas components, pages e styles.
@@ -123,7 +123,7 @@ function Document() {
                                  as dependências estejam instaladas.
                             </li>
                             <li>
-                                Depois de tudo configurado no diretório raiz executa <strong>npm install</strong>
+                                Depois de tudo configurado no diretório raiz executa <strong>npm install</strong> 
                                 e na pasta frontend executa  <strong>npm install</strong> e depois
                                  <strong>npm run build</strong> para construir o projeto.
                             </li>
