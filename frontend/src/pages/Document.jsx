@@ -4,7 +4,7 @@ function Document() {
     return (
         <div className="container">
             <div className="titleDoc">
-                <h1>API_BUSCAR_MUSEU</h1>
+                <h1>API_BUSCADOR_MUSEU</h1>
                 <h2>Documentação</h2>
             </div>
 
@@ -26,7 +26,7 @@ function Document() {
                     <p className="parag">É necessário ter o Node.js instalado</p>
                     <div className="seqExec">
                         <ol>
-                            <li>Crie uma pasta com o nome do projeto, dentro dessa pasta cria outra pasta chamada backend.</li>
+                            <li>Crie uma pasta com o nome do projeto.</li>
                             <li>No prompt de comando digita: npm init -y.. Esse comando inicia o projeto Node e cria o pacote json (package.json)</li>
                             <li>Ainda no prompt instale as dependências: npm install express cors sqlite3, express facilita a criação de servidores e APIs Restful, o cors permite que o servidor responde a solicitações de diferentes origens de maneira segura, já o SQLite é o banco de dados que iremos trabalhar, pode ser substituído por qualquer outro.</li>
                             <li>Abra o projeto no seu editor preferido e coloque seu arquivo json (ex: data.json) com os registros que deseja trabalhar para inserir no banco de dados. </li>
@@ -97,6 +97,46 @@ function Document() {
                      Para parar o servidor ou a aplicação é só digitar Ctrl+C.
                       Sempre que fizer alguma alteração no servidor, precisa pará-lo e reiniciá-lo para que as alterações sejam aplicadas.
                 </p>
+                <section>
+                    <p>
+                        Essa explicação acima nos permite desenvolver uma aplicação para ser executada em desenvolvimento.
+                        Para a produção precisamos fazer alguns ajustes. E a configuração vai depender do servidor que você irá utilizar
+                    </p>
+                    <h5 className="topicos">Nesse caso fizemos uso do Render.</h5>
+                    <div className="seqExec">
+                        <ol>
+                            <li>
+                                Criamos o arquivo .env para configurar as variáveis de ambiente, importante para a produção,
+                                 pois ao colocar o projeto em produção pode haver conflitos para acessar os caminhos da url e arquivos.
+                            </li>
+                            <li>
+                                Criamos o arquivo render.yaml. Arquivo utilizado pelo render para entender quais são os tipos
+                                de serviços os comandos de build e start e as variáveis de ambiente.
+                            </li>
+                            <li>
+                                No arquivo server.js foi acrescentado instruções especificas ao banco de dados para o acesso em produção
+                                com o uso do DATABASE_URL, e foi acrescentado uma condição para servir os arquivos do frontend em produção.
+                            </li>
+                            <li>
+                                No package.json (em ambos) foi acrescentado o script “Build:frontend”, e no arquivo vite.config
+                                acrescentado configurações específicas para o servidor de desenvolvimento. Importante que todas
+                                 as dependências estejam instaladas.
+                            </li>
+                            <li>
+                                Depois de tudo configurado no diretório raiz executa <strong>npm install</strong>
+                                e na pasta frontend executa  <strong>npm install</strong> e depois
+                                 <strong>npm run build</strong> para construir o projeto.
+                            </li>
+                            <li>
+                                Coloque seu projeto no GitHub ou GitLab, pois é daí que o servidor vai baixa-lo. <br />
+                                Faça login no Render.com com o Git de sua escolha, escolha o repositório o qual vai fazer o deploy. <br />
+                                Cria um novo serviço, e faz as configurações necessárias. <br />
+                                Depois faça o Deploy, o Render vai buscar no git pelo seu último commit,
+                                  mas depois se quiser fazer o deploy especifico de algum commit também é possível.
+                            </li>
+                        </ol>
+                    </div>
+                </section>
             </div>
         </div>
     )
