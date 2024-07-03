@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Usar DATABASE_URL para o caminho do banco de dados
-const dbPath = process.env.DATABASE_URL || './database.db';
+const dbPath = ppath.resolve(__dirname, rocess.env.DATABASE_URL || './database.db');
 const db = new sqlite3.Database(dbPath);
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
