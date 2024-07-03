@@ -21,7 +21,7 @@ function Document() {
                          Expõe também um API RESTful que permite consultar os dados inseridos.
                     </p>
                     <h5 className="topicos">Estrutura</h5>
-                    <figure><img src="../../public/estruturaBackend.png" alt="Estrutura do Backend" className="estrutura" /></figure>
+                    <figure><img src="/public/estruturaBackend.png" alt="Estrutura do Backend" className="estrutura" /></figure>
                     <h5 className="topics">Execução</h5>
                     <p className="parag">É necessário ter o Node.js instalado</p>
                     <div className="seqExec">
