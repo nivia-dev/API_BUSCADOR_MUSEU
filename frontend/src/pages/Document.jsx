@@ -21,7 +21,7 @@ function Document() {
                          Expõe também um API RESTful que permite consultar os dados inseridos.
                     </p>
                     <h5 className="topicos">Estrutura</h5>
-                    <figure><img src="/public/estruturaBackend.png" alt="Estrutura do Backend" className="estrutura" /></figure>
+                    <figure><img src="/estruturaBackend.png" alt="Estrutura do Backend" className="estrutura" /></figure>
                     <h5 className="topics">Execução</h5>
                     <p className="parag">É necessário ter o Node.js instalado</p>
                     <div className="seqExec">
@@ -48,7 +48,7 @@ function Document() {
                     <h3 className="subtitle">2 - FRONTEND</h3>
                     <p className="parag">A aplicação foi construída usando o React e configurada usando o Vite. Para as requisições usamos o axios.</p>
                     <h5 className="topicos">Estrutura</h5>
-                    <figure><img src="../../public/estruturaFrontend.png" alt="Estrutura do Backend" className="estrutura" /></figure>
+                    <figure><img src="/estruturaFrontend.png" alt="Estrutura do Backend" className="estrutura" /></figure>
                     <h5 className="topicos">Execução</h5>
                     <div className="seqExec">
                         <ol>
