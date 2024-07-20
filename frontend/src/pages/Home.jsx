@@ -92,6 +92,7 @@ function Home() {
                 setUfSelecionado('');
                 setMunicipioSelecionado('');
                 setMunicipios([]);
+                setSelecionadoItem(null)
             }
             if (!newKeys.includes('Nome do Museu')) {
                 setBuscaTermo('');
@@ -115,6 +116,8 @@ function Home() {
     const mudancaUf = (uf) => {
         setUfSelecionado(uf);
         setMunicipioSelecionado('');
+        setSelecionadoItem(null);
+
         if (uf) {
             fetchMunicipios(uf);
             fetchData();
@@ -136,12 +139,16 @@ function Home() {
                     <Filters
                         selecionadaChaves={selecionadaChaves}
                         mudancaCheckbox={mudancaCheckbox}
-                        setBuscaTermo={setBuscaTermo}
+                        setBuscaTermo={(termo) => {
+                            setBuscaTermo (termo);
+                            setSelecionadoItem(null);}}
                         ufs={ufs}
                         setUfSelecionado={mudancaUf}
                         ufSelecionado={ufSelecionado}
                         municipios={municipios}
-                        setMunicipioSelecionado={setMunicipioSelecionado}
+                        setMunicipioSelecionado={(municipio) => {
+                            setMunicipioSelecionado(municipio);
+                            setSelecionadoItem(null)}}
                         municipioSelecionado={municipioSelecionado}
                     />
                 </div>
