@@ -31,9 +31,12 @@ function Home() {
         }
     }, [pagina, ufSelecionado, municipioSelecionado, buscaTermo]);
 
+  
+    const apiUrl = import.meta.env.VITE_API_URL || '';
+
     const fetchUfs = async () => {
         try {
-            const response = await axios.get('/api/ufs');
+            const response = await axios.get(`${apiUrl}/api/ufs`);
             setUfs(response.data);
         } catch (error) {
             console.error('Erro ao buscar UFs', error);
@@ -42,7 +45,7 @@ function Home() {
 
     const fetchMunicipios = async (uf) => {
         try {
-            const response = await axios.get('/api/municipios', {
+            const response = await axios.get(`${apiUrl}/api/municipios`, {
                 params: { uf }
             });
             setMunicipios(response.data);
@@ -53,7 +56,7 @@ function Home() {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('/api/museus', {
+            const response = await axios.get(`${apiUrl}/api/museus`, {
                 params: {
                     pagina,
                     limite,
@@ -61,7 +64,7 @@ function Home() {
                     municipio: municipioSelecionado || undefined
                 }
             });
-            console.log('Resposta da API:', response.data);
+            
             setDadosFiltrados(response.data);
         } catch (error) {
             console.error('Erro ao buscar dados', error);
@@ -70,7 +73,7 @@ function Home() {
 
     const fetchSearchData = async () => {
         try {
-            const response = await axios.get('/api/pesquisa', {
+            const response = await axios.get(`${apiUrl}/api/pesquisa`, {
                 params: {
                     termo: buscaTermo
                 }
